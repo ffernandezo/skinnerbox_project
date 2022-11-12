@@ -1,6 +1,6 @@
 from skinnerbox import *
 
-# Programa para realizar pruebas de hardware
+# Programa de ejemplo para realizar pruebas de hardware
 
 IN1.when_pressed = OUT1.pulse
 
