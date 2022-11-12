@@ -12,10 +12,11 @@ palancaDer=IN2
 luz_estimulo=OUT1
 reward=OUT3
 
-pgratio = 1          # Numero inicial de respuestas requeridas
-duracion_exp = 120   # Duración del experimento (segundos)
+pgratio = 1         # Numero inicial de respuestas requeridas
+duracion_exp = 120  # Duración del experimento (segundos)
 cnt_incorrectas = 0 # Contador de respuestas incorrectas
 cnt_correctas = 0   # Contador de respuestas correctas
+cnt = 0             # Contador de razón
 
 def incorrecta():
     global cnt_incorrectas
@@ -46,7 +47,7 @@ palancaIz.when_pressed = correcta
           
 while True:
     luz_estimulo.on()
-    if cnt_correctas == pgratio:
+    if cnt == pgratio:
         recompensa()
         pgratio += 1
-        cnt_correctas = 0
+        cnt = 0
