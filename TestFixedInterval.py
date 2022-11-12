@@ -9,8 +9,7 @@ log = LogFile("logFI.txt")
 
 palancaIz=IN1
 palancaDer=IN2
-ledIz=OUT1
-ledDer=OUT2
+luz_estimulo=OUT1
 reward=OUT3
 
 intervalo = 5       # Tiempo a esperar entre respuesta correcta y recompensa
@@ -34,7 +33,7 @@ def cierre():
     shut_down()
     
 def recompensa():
-    ledIz.off()
+    
     reward.blink(on_time=1,n=1)
     log.log_event("Recompensa")
     
@@ -46,7 +45,8 @@ palancaDer.when_pressed = incorrecta
 palancaIz.when_pressed = correcta
           
 while True:
-    ledIz.on()
+    luz_estimulo.on()
     palancaIz.wait_for_press()
+    luz_estimulo.off()
     sleep(intervalo)
     recompensa()
