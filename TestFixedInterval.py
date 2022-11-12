@@ -2,7 +2,7 @@ from skinnerbox import *
 log = LogFile("logFI.txt")
 
 # Test de intervalo fijo
-# Al iniciar el programa, se enciende la luz izquierda (estimulo).
+# Al iniciar el programa, se enciende la luz de estimulo.
 # El roedor debera presionar la palanca para iniciar un contador de tiempo
 # que al finalizar le otorgará una recompensa. Mientras se espera el tiempo
 # se guarda cada activacion de las palancas.
